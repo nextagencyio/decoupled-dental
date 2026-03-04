@@ -1,0 +1,85 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Welcome to Brightside Dental",
+          "path": "/homepage",
+          "heroTitle": "Your Smile, Our Passion",
+          "heroSubtitle": "Brightside Dental",
+          "heroDescription": {
+            "processed": "<p>Comprehensive dental care for the whole family in a warm, modern environment. From routine cleanings to advanced cosmetic procedures, our experienced team is dedicated to helping you achieve the healthy, confident smile you deserve.</p>",
+            "summary": "Comprehensive dental care for the whole family in a warm, modern environment. From routine cleanings to advanced cosmetic procedures, our experienced team is dedicated to helping you achieve the healt"
+          },
+          "heroImage": {
+            "url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+            "alt": "Modern dental office with comfortable patient chair and natural light",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-patients",
+              "title": "",
+              "number": "12,000+",
+              "label": "Patients Served"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-experience",
+              "title": "",
+              "number": "25+",
+              "label": "Years of Experience"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-satisfaction",
+              "title": "",
+              "number": "98%",
+              "label": "Patient Satisfaction"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-providers",
+              "title": "",
+              "number": "8",
+              "label": "Dental Professionals"
+            }
+          ],
+          "featuredItemsTitle": "Our Services",
+          "ctaTitle": "Schedule Your Appointment",
+          "ctaDescription": {
+            "processed": "<p>New patients are always welcome. Contact us today to schedule your first visit and take the first step toward a healthier smile. We offer flexible scheduling, including early morning and evening appointments.</p>",
+            "summary": "New patients are always welcome. Contact us today to schedule your first visit and take the first step toward a healthier smile. We offer flexible scheduling, including early morning and evening appoi"
+          },
+          "ctaPrimary": "Book Online",
+          "ctaSecondary": "Call Us"
+        }
+      ]
+    }
+  }
+}

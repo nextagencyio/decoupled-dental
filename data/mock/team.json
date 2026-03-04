@@ -1,0 +1,169 @@
+{
+  "data": {
+    "nodeProviders": {
+      "__typename": "NodeProviderConnection",
+      "nodes": [
+        {
+          "__typename": "NodeProvider",
+          "id": "provider-patel",
+          "title": "Dr. Anita Patel, DDS",
+          "path": "/team/dr-anita-patel",
+          "body": {
+            "processed": "<p>Dr. Anita Patel founded Brightside Dental in 2001 with a vision of providing exceptional dental care in a welcoming, patient-centered environment. With over 25 years of experience, she combines clinical expertise with a gentle, compassionate approach that puts even the most anxious patients at ease.</p><p>Dr. Patel is committed to staying at the forefront of dental technology and techniques. She regularly attends continuing education courses and has completed advanced training in implant dentistry, cosmetic procedures, and digital smile design.</p><p>Outside the office, Dr. Patel volunteers with the Give Back a Smile program, providing free dental care to survivors of domestic violence, and mentors pre-dental students at the local university.</p>",
+            "summary": "Dr. Anita Patel founded Brightside Dental in 2001 with a vision of providing exceptional dental care in a welcoming, patient-centered environment. With over 25 years of experience, she combines clinic"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80",
+            "alt": "Dr. Anita Patel, general dentist, professional portrait",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "credentials": "DDS, FAGD",
+          "specialty": "General & Cosmetic Dentistry",
+          "education": {
+            "processed": "<p>Doctor of Dental Surgery, University of Pennsylvania School of Dental Medicine<br>Bachelor of Science in Biology, UCLA<br>Fellow, Academy of General Dentistry</p>",
+            "summary": "Doctor of Dental Surgery, University of Pennsylvania School of Dental MedicineBachelor of Science in Biology, UCLAFellow, Academy of General Dentistry"
+          },
+          "languages": [
+            "English",
+            "Hindi",
+            "Gujarati"
+          ],
+          "acceptingPatients": true,
+          "providerRole": [
+            {
+              "id": "General Dentist",
+              "name": "General Dentist"
+            }
+          ]
+        },
+        {
+          "__typename": "NodeProvider",
+          "id": "provider-chen",
+          "title": "Dr. Michael Chen, DMD",
+          "path": "/team/dr-michael-chen",
+          "body": {
+            "processed": "<p>Dr. Michael Chen joined Brightside Dental in 2015, bringing specialized expertise in orthodontics and pediatric dentistry. Known for his patience and humor, he has a particular gift for working with children and teens, making orthodontic treatment a positive experience for young patients and their families.</p><p>Dr. Chen is a certified Invisalign provider and has been recognized as a Top Provider for three consecutive years. He also has extensive experience with traditional braces, lingual braces, and early intervention orthodontics for children.</p><p>When he's not in the office, Dr. Chen coaches his daughter's youth soccer team and enjoys hiking in the mountains near his home.</p>",
+            "summary": "Dr. Michael Chen joined Brightside Dental in 2015, bringing specialized expertise in orthodontics and pediatric dentistry. Known for his patience and humor, he has a particular gift for working with c"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+            "alt": "Dr. Michael Chen, orthodontist, professional portrait",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "credentials": "DMD, MS",
+          "specialty": "Orthodontics",
+          "education": {
+            "processed": "<p>Doctor of Dental Medicine, Tufts University School of Dental Medicine<br>Master of Science in Orthodontics, Tufts University<br>Bachelor of Science in Biomedical Engineering, Boston University</p>",
+            "summary": "Doctor of Dental Medicine, Tufts University School of Dental MedicineMaster of Science in Orthodontics, Tufts UniversityBachelor of Science in Biomedical Engineering, Boston University"
+          },
+          "languages": [
+            "English",
+            "Mandarin"
+          ],
+          "acceptingPatients": true,
+          "providerRole": [
+            {
+              "id": "Orthodontist",
+              "name": "Orthodontist"
+            }
+          ]
+        },
+        {
+          "__typename": "NodeProvider",
+          "id": "provider-johnson",
+          "title": "Dr. Rachel Johnson, DDS",
+          "path": "/team/dr-rachel-johnson",
+          "body": {
+            "processed": "<p>Dr. Rachel Johnson is Brightside Dental's oral surgery specialist, providing expert care for complex extractions, dental implant placement, and corrective jaw surgery. She completed a four-year residency in oral and maxillofacial surgery at Johns Hopkins Hospital, where she gained extensive experience in both office-based and hospital surgical procedures.</p><p>Dr. Johnson is known for her meticulous surgical technique and her commitment to patient comfort. She offers multiple sedation options, including IV sedation, to ensure a pain-free experience for every patient.</p><p>Dr. Johnson is an active member of the American Association of Oral and Maxillofacial Surgeons and regularly lectures at regional dental conferences on advances in implant surgery.</p>",
+            "summary": "Dr. Rachel Johnson is Brightside Dental's oral surgery specialist, providing expert care for complex extractions, dental implant placement, and corrective jaw surgery. She completed a four-year reside"
+          },
+          "image": {
+            "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80",
+            "alt": "Dr. Rachel Johnson, oral surgeon, professional portrait",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "credentials": "DDS, MD",
+          "specialty": "Oral & Maxillofacial Surgery",
+          "education": {
+            "processed": "<p>Doctor of Dental Surgery, Columbia University College of Dental Medicine<br>Doctor of Medicine, Columbia University College of Physicians and Surgeons<br>Residency in Oral and Maxillofacial Surgery, Johns Hopkins Hospital</p>",
+            "summary": "Doctor of Dental Surgery, Columbia University College of Dental MedicineDoctor of Medicine, Columbia University College of Physicians and SurgeonsResidency in Oral and Maxillofacial Surgery, Johns Hop"
+          },
+          "languages": [
+            "English",
+            "Spanish"
+          ],
+          "acceptingPatients": true,
+          "providerRole": [
+            {
+              "id": "Oral Surgeon",
+              "name": "Oral Surgeon"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

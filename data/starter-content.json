@@ -1,0 +1,261 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page with hero section, features, and call-to-action areas",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string", "description": "Main headline in the hero section" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string", "description": "Secondary text below the hero title" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text", "description": "Longer descriptive text for the hero section" },
+        { "id": "features_title", "label": "Features Section Title", "type": "string" },
+        { "id": "features_subtitle", "label": "Features Section Subtitle", "type": "string" },
+        { "id": "features_items", "label": "Feature Items", "type": "paragraph(feature_item)[]", "description": "List of feature highlight blocks" },
+        { "id": "cta_title", "label": "CTA Section Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA Text", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA Text", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "service",
+      "label": "Service",
+      "description": "Dental services offered by the practice",
+      "body": true,
+      "fields": [
+        { "id": "duration", "label": "Duration", "type": "string", "description": "Typical appointment duration" },
+        { "id": "price_range", "label": "Price Range", "type": "string", "description": "Estimated cost range" },
+        { "id": "image", "label": "Service Image", "type": "image", "description": "Featured image for the service" }
+      ]
+    },
+    {
+      "bundle": "provider",
+      "label": "Provider",
+      "description": "Dental care providers and dentists",
+      "body": true,
+      "fields": [
+        { "id": "specialty", "label": "Specialty", "type": "string", "description": "Area of dental specialization" },
+        { "id": "email", "label": "Email", "type": "string", "description": "Professional email address" },
+        { "id": "phone", "label": "Phone", "type": "string", "description": "Contact phone number" },
+        { "id": "photo", "label": "Photo", "type": "image", "description": "Professional headshot" },
+        { "id": "education", "label": "Education", "type": "text", "description": "Educational background and credentials" }
+      ]
+    },
+    {
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "description": "Patient testimonials and reviews",
+      "body": true,
+      "fields": [
+        { "id": "patient_name", "label": "Patient Name", "type": "string", "description": "Name of the patient" },
+        { "id": "service_received", "label": "Service Received", "type": "string", "description": "The dental service received" },
+        { "id": "rating", "label": "Rating", "type": "integer", "description": "Rating out of 5" },
+        { "id": "photo", "label": "Photo", "type": "image", "description": "Patient photo" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages for about, contact, policies, etc.",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "description": "Individual feature highlight with icon, title, and description",
+      "fields": [
+        { "id": "icon", "label": "Icon", "type": "string", "description": "Icon name for the feature" },
+        { "id": "title", "label": "Title", "type": "string!", "description": "Feature title (required)" },
+        { "id": "description", "label": "Description", "type": "text", "description": "Detailed description of the feature" }
+      ]
+    }
+  ],
+  "content": [
+    { "id": "feature-gentle", "type": "paragraph.feature_item", "values": { "icon": "heart", "title": "Gentle Care", "description": "We prioritize your comfort with gentle techniques and a calming environment for every procedure." } },
+    { "id": "feature-technology", "type": "paragraph.feature_item", "values": { "icon": "scan", "title": "Advanced Technology", "description": "State-of-the-art digital X-rays, 3D imaging, and laser dentistry for precise, efficient treatments." } },
+    { "id": "feature-family", "type": "paragraph.feature_item", "values": { "icon": "users", "title": "Family Friendly", "description": "Comprehensive dental care for patients of all ages, from pediatric dentistry to senior oral health." } },
+    { "id": "feature-emergency", "type": "paragraph.feature_item", "values": { "icon": "clock", "title": "Emergency Services", "description": "Same-day emergency appointments available for urgent dental needs when you need us most." } },
+    { "id": "feature-insurance", "type": "paragraph.feature_item", "values": { "icon": "shield", "title": "Insurance Accepted", "description": "We work with most major dental insurance plans and offer flexible payment options for every budget." } },
+    { "id": "feature-cosmetic", "type": "paragraph.feature_item", "values": { "icon": "sparkles", "title": "Cosmetic Excellence", "description": "Transform your smile with veneers, whitening, and cosmetic bonding by experienced professionals." } },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Bright Smile Dental Homepage",
+        "hero_title": "Your Smile, Our Passion",
+        "hero_subtitle": "Bright Smile Dental",
+        "hero_description": "<p>Experience exceptional dental care in a warm, welcoming environment. From routine cleanings to cosmetic transformations, our team is dedicated to giving you a healthy, beautiful smile.</p>",
+        "features_title": "Why Choose Bright Smile Dental?",
+        "features_subtitle": "Compassionate care meets modern dentistry for the whole family",
+        "features_items": ["@feature-gentle", "@feature-technology", "@feature-family", "@feature-emergency", "@feature-insurance", "@feature-cosmetic"],
+        "cta_title": "Ready for a Brighter Smile?",
+        "cta_description": "<p>Schedule your appointment today and discover why families trust Bright Smile Dental for all their dental care needs. New patients always welcome.</p>",
+        "cta_primary": "Book Appointment",
+        "cta_secondary": "Meet Our Dentists"
+      }
+    },
+    {
+      "id": "service-cleaning",
+      "type": "node.service",
+      "path": "/services/teeth-cleaning-and-prevention",
+      "values": {
+        "title": "Teeth Cleaning & Prevention",
+        "body": "<p>Regular dental cleanings are the foundation of good oral health. Our skilled hygienists use the latest techniques to remove plaque, tartar, and surface stains while checking for early signs of decay or gum disease.</p><h2>What to Expect</h2><p>During your cleaning appointment, we perform a thorough examination, professional cleaning, and polishing. We also provide personalized recommendations for your at-home oral care routine.</p><h2>Benefits</h2><ul><li>Prevention of cavities and gum disease</li><li>Removal of surface stains for a brighter smile</li><li>Early detection of oral health issues</li><li>Fresher breath and healthier gums</li></ul>",
+        "duration": "45-60 minutes",
+        "price_range": "$95 - $200",
+        "image": { "uri": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80", "alt": "Dental cleaning procedure", "title": "Teeth Cleaning" }
+      }
+    },
+    {
+      "id": "service-whitening",
+      "type": "node.service",
+      "path": "/services/teeth-whitening",
+      "values": {
+        "title": "Professional Teeth Whitening",
+        "body": "<p>Achieve a dazzling, confident smile with our professional teeth whitening treatments. Our in-office whitening delivers dramatic results in a single visit, lightening teeth by several shades.</p><h2>Our Whitening Options</h2><p>We offer both in-office power whitening for immediate results and custom take-home trays for gradual brightening at your convenience.</p><h2>Results You Can See</h2><ul><li>Teeth up to 8 shades whiter in one visit</li><li>Safe, dentist-supervised treatment</li><li>Long-lasting results with proper care</li><li>Custom take-home kits for maintenance</li></ul>",
+        "duration": "60-90 minutes",
+        "price_range": "$300 - $600",
+        "image": { "uri": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80", "alt": "Teeth whitening treatment", "title": "Teeth Whitening" }
+      }
+    },
+    {
+      "id": "service-implants",
+      "type": "node.service",
+      "path": "/services/dental-implants",
+      "values": {
+        "title": "Dental Implants",
+        "body": "<p>Dental implants are the gold standard for replacing missing teeth. They look, feel, and function like natural teeth, providing a permanent solution that preserves your jawbone and facial structure.</p><h2>The Implant Process</h2><p>Our experienced implant team guides you through every step, from initial consultation and 3D imaging to implant placement and final restoration.</p><h2>Advantages of Implants</h2><ul><li>Permanent, natural-looking tooth replacement</li><li>Preserves jawbone and prevents bone loss</li><li>No impact on adjacent healthy teeth</li><li>Easy to care for like natural teeth</li></ul>",
+        "duration": "Multiple visits over 3-6 months",
+        "price_range": "$3,000 - $5,000 per implant",
+        "image": { "uri": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80", "alt": "Dental implant model", "title": "Dental Implants" }
+      }
+    },
+    {
+      "id": "service-orthodontics",
+      "type": "node.service",
+      "path": "/services/orthodontics",
+      "values": {
+        "title": "Orthodontics & Clear Aligners",
+        "body": "<p>Straighten your teeth discreetly with our orthodontic solutions. We offer traditional braces and clear aligner therapy to correct misalignment, crowding, and bite issues for patients of all ages.</p><h2>Treatment Options</h2><p>Whether you prefer the precision of traditional braces or the convenience of clear aligners, we create a customized treatment plan tailored to your unique needs and lifestyle.</p><h2>Benefits</h2><ul><li>Improved smile aesthetics and confidence</li><li>Better oral hygiene with straighter teeth</li><li>Corrected bite for improved jaw function</li><li>Clear aligner options for discreet treatment</li></ul>",
+        "duration": "12-24 months average treatment",
+        "price_range": "$3,500 - $7,000",
+        "image": { "uri": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80", "alt": "Clear dental aligners", "title": "Orthodontics" }
+      }
+    },
+    {
+      "id": "provider-chen",
+      "type": "node.provider",
+      "path": "/dentists/dr-sarah-chen",
+      "values": {
+        "title": "Dr. Sarah Chen, DDS",
+        "body": "<p>Dr. Chen is a highly skilled general dentist with over 15 years of experience in comprehensive dental care. She is known for her gentle approach and ability to put even the most anxious patients at ease.</p><p>Her passion for continuing education keeps her at the forefront of modern dental techniques.</p>",
+        "specialty": "General & Cosmetic Dentistry",
+        "email": "dr.chen@brightsmile.example.com",
+        "phone": "(555) 100-2001",
+        "photo": { "uri": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80", "alt": "Dr. Sarah Chen", "title": "Dr. Sarah Chen" },
+        "education": "<p><strong>University of Pacific</strong> - Doctor of Dental Surgery (DDS)<br/><strong>Stanford University</strong> - Bachelor of Science in Biology<br/><strong>American Academy of Cosmetic Dentistry</strong> - Fellowship</p>"
+      }
+    },
+    {
+      "id": "provider-martinez",
+      "type": "node.provider",
+      "path": "/dentists/dr-james-martinez",
+      "values": {
+        "title": "Dr. James Martinez, DMD",
+        "body": "<p>Dr. Martinez is a board-certified oral surgeon specializing in dental implants and complex extractions. With advanced training in implantology, he has successfully placed thousands of implants throughout his career.</p><p>He combines surgical precision with compassionate care.</p>",
+        "specialty": "Oral Surgery & Implantology",
+        "email": "dr.martinez@brightsmile.example.com",
+        "phone": "(555) 100-2002",
+        "photo": { "uri": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80", "alt": "Dr. James Martinez", "title": "Dr. James Martinez" },
+        "education": "<p><strong>Harvard School of Dental Medicine</strong> - Doctor of Dental Medicine (DMD)<br/><strong>Massachusetts General Hospital</strong> - Oral Surgery Residency<br/><strong>American Board of Oral and Maxillofacial Surgery</strong> - Board Certified</p>"
+      }
+    },
+    {
+      "id": "provider-patel",
+      "type": "node.provider",
+      "path": "/dentists/dr-priya-patel",
+      "values": {
+        "title": "Dr. Priya Patel, DDS",
+        "body": "<p>Dr. Patel is an orthodontic specialist dedicated to creating beautiful, healthy smiles for children, teens, and adults. She is certified in both traditional orthodontics and the latest clear aligner technologies.</p><p>Her warm personality makes her a favorite among younger patients.</p>",
+        "specialty": "Orthodontics",
+        "email": "dr.patel@brightsmile.example.com",
+        "phone": "(555) 100-2003",
+        "photo": { "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80", "alt": "Dr. Priya Patel", "title": "Dr. Priya Patel" },
+        "education": "<p><strong>Columbia University College of Dental Medicine</strong> - Doctor of Dental Surgery (DDS)<br/><strong>University of Connecticut</strong> - Orthodontics Residency<br/><strong>American Board of Orthodontics</strong> - Board Certified</p>"
+      }
+    },
+    {
+      "id": "testimonial-johnson",
+      "type": "node.testimonial",
+      "path": "/testimonials/emily-johnson",
+      "values": {
+        "title": "Life-Changing Smile Makeover",
+        "body": "<p>I was always self-conscious about my smile until I visited Bright Smile Dental. Dr. Chen recommended a combination of whitening and veneers, and the results are absolutely stunning. I cannot recommend them enough!</p>",
+        "patient_name": "Emily Johnson",
+        "service_received": "Cosmetic Dentistry",
+        "rating": 5,
+        "photo": { "uri": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=800&q=80", "alt": "Emily Johnson", "title": "Emily Johnson" }
+      }
+    },
+    {
+      "id": "testimonial-williams",
+      "type": "node.testimonial",
+      "path": "/testimonials/michael-williams",
+      "values": {
+        "title": "Painless Dental Implant Experience",
+        "body": "<p>After losing a tooth in an accident, I was nervous about getting an implant. Dr. Martinez explained everything clearly and made the entire process virtually painless. My new implant looks and feels just like my natural teeth.</p>",
+        "patient_name": "Michael Williams",
+        "service_received": "Dental Implants",
+        "rating": 5,
+        "photo": { "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80", "alt": "Michael Williams", "title": "Michael Williams" }
+      }
+    },
+    {
+      "id": "testimonial-garcia",
+      "type": "node.testimonial",
+      "path": "/testimonials/sofia-garcia",
+      "values": {
+        "title": "Best Family Dentist Ever",
+        "body": "<p>Our whole family has been coming to Bright Smile Dental for three years now. My kids actually look forward to their dental visits! The staff is incredibly patient with children and makes every visit educational and fun.</p>",
+        "patient_name": "Sofia Garcia",
+        "service_received": "Family Dentistry",
+        "rating": 5,
+        "photo": { "uri": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80", "alt": "Sofia Garcia", "title": "Sofia Garcia" }
+      }
+    },
+    {
+      "id": "testimonial-kim",
+      "type": "node.testimonial",
+      "path": "/testimonials/david-kim",
+      "values": {
+        "title": "Clear Aligners Changed My Life",
+        "body": "<p>At 35, I never thought I would straighten my teeth, but Dr. Patel showed me how clear aligners could transform my smile discreetly. Eighteen months later, I have the straight teeth I always wanted.</p>",
+        "patient_name": "David Kim",
+        "service_received": "Orthodontics",
+        "rating": 4,
+        "photo": { "uri": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&q=80", "alt": "David Kim", "title": "David Kim" }
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Bright Smile Dental",
+        "body": "<p>Bright Smile Dental has been serving our community with exceptional dental care since 2005. Founded by Dr. Sarah Chen, our practice has grown into a comprehensive dental center equipped with the latest technology.</p><h2>Our Mission</h2><p>We believe everyone deserves a healthy, beautiful smile. Our mission is to provide compassionate, personalized dental care in a comfortable environment.</p><h2>Our Values</h2><ul><li><strong>Patient-Centered Care</strong> - Your comfort and well-being are our top priorities</li><li><strong>Excellence</strong> - We pursue the highest standards in dental treatment</li><li><strong>Integrity</strong> - Honest recommendations and transparent pricing</li><li><strong>Innovation</strong> - Investing in the latest dental technology</li></ul>"
+      }
+    },
+    {
+      "id": "privacy-page",
+      "type": "node.page",
+      "path": "/privacy-policy",
+      "values": {
+        "title": "Privacy Policy",
+        "body": "<p>At Bright Smile Dental, we take the privacy of your personal and health information seriously. This policy outlines how we collect, use, and protect your data in compliance with HIPAA regulations.</p><h2>Information We Collect</h2><p>We collect information necessary to provide dental care, including personal identification, dental and medical history, insurance information, and treatment records.</p><h2>How We Protect Your Information</h2><p>All patient records are stored securely using encrypted digital systems. Access is limited to authorized personnel directly involved in your care.</p><h2>Your Rights</h2><p>You have the right to access your health records, request corrections, and understand how your information is used.</p>"
+      }
+    }
+  ]
+}

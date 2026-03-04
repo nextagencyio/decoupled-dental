@@ -1,0 +1,309 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Dental practice homepage with hero, statistics, and calls to action",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "hero_image", "label": "Hero Image", "type": "image" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "service",
+      "label": "Service",
+      "description": "Dental services and treatments offered by the practice",
+      "body": true,
+      "fields": [
+        { "id": "image", "label": "Service Image", "type": "image" },
+        { "id": "summary", "label": "Summary", "type": "text" },
+        { "id": "duration", "label": "Typical Duration", "type": "string" },
+        { "id": "price_range", "label": "Price Range", "type": "string" },
+        { "id": "insurance_accepted", "label": "Insurance Accepted", "type": "bool" },
+        { "id": "service_category", "label": "Service Category", "type": "term(service_categories)[]" }
+      ]
+    },
+    {
+      "bundle": "provider",
+      "label": "Provider",
+      "description": "Dentists, hygienists, and staff members",
+      "body": true,
+      "fields": [
+        { "id": "image", "label": "Portrait Photo", "type": "image" },
+        { "id": "credentials", "label": "Credentials", "type": "string" },
+        { "id": "specialty", "label": "Specialty", "type": "string" },
+        { "id": "education", "label": "Education", "type": "text" },
+        { "id": "languages", "label": "Languages Spoken", "type": "string[]" },
+        { "id": "accepting_patients", "label": "Accepting New Patients", "type": "bool" },
+        { "id": "provider_role", "label": "Role", "type": "term(provider_roles)[]" }
+      ]
+    },
+    {
+      "bundle": "testimonial",
+      "label": "Testimonial",
+      "description": "Patient testimonials and reviews",
+      "fields": [
+        { "id": "quote", "label": "Quote", "type": "text" },
+        { "id": "patient_name", "label": "Patient Name", "type": "string" },
+        { "id": "treatment_received", "label": "Treatment Received", "type": "string" },
+        { "id": "rating", "label": "Rating", "type": "integer" },
+        { "id": "date_received", "label": "Date", "type": "datetime" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vid": "service_categories",
+      "name": "Service Categories",
+      "terms": [
+        { "name": "Preventive Care" },
+        { "name": "Restorative" },
+        { "name": "Cosmetic" },
+        { "name": "Orthodontics" },
+        { "name": "Oral Surgery" },
+        { "name": "Pediatric" },
+        { "name": "Emergency" }
+      ]
+    },
+    {
+      "vid": "provider_roles",
+      "name": "Provider Roles",
+      "terms": [
+        { "name": "General Dentist" },
+        { "name": "Orthodontist" },
+        { "name": "Oral Surgeon" },
+        { "name": "Dental Hygienist" },
+        { "name": "Pediatric Dentist" }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-patients",
+      "type": "paragraph.stat_item",
+      "values": { "number": "12,000+", "label": "Patients Served" }
+    },
+    {
+      "id": "stat-experience",
+      "type": "paragraph.stat_item",
+      "values": { "number": "25+", "label": "Years of Experience" }
+    },
+    {
+      "id": "stat-satisfaction",
+      "type": "paragraph.stat_item",
+      "values": { "number": "98%", "label": "Patient Satisfaction" }
+    },
+    {
+      "id": "stat-providers",
+      "type": "paragraph.stat_item",
+      "values": { "number": "8", "label": "Dental Professionals" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Welcome to Brightside Dental",
+        "hero_title": "Your Smile, Our Passion",
+        "hero_subtitle": "Brightside Dental",
+        "hero_description": "<p>Comprehensive dental care for the whole family in a warm, modern environment. From routine cleanings to advanced cosmetic procedures, our experienced team is dedicated to helping you achieve the healthy, confident smile you deserve.</p>",
+        "hero_image": { "uri": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80", "alt": "Modern dental office with comfortable patient chair and natural light" },
+        "stats_items": ["@stat-patients", "@stat-experience", "@stat-satisfaction", "@stat-providers"],
+        "featured_items_title": "Our Services",
+        "cta_title": "Schedule Your Appointment",
+        "cta_description": "<p>New patients are always welcome. Contact us today to schedule your first visit and take the first step toward a healthier smile. We offer flexible scheduling, including early morning and evening appointments.</p>",
+        "cta_primary": "Book Online",
+        "cta_secondary": "Call Us"
+      }
+    },
+    {
+      "id": "service-cleaning",
+      "type": "node.service",
+      "path": "/services/teeth-cleaning-and-exams",
+      "values": {
+        "title": "Teeth Cleaning & Exams",
+        "body": "<p>Regular dental cleanings and comprehensive exams are the foundation of excellent oral health. Our skilled hygienists use the latest techniques and technology to thoroughly clean your teeth while making the experience as comfortable as possible.</p><h2>What to Expect</h2><ul><li>Thorough removal of plaque and tartar buildup</li><li>Professional polishing to remove surface stains</li><li>Comprehensive examination by your dentist</li><li>Digital X-rays as needed (significantly less radiation than traditional X-rays)</li><li>Oral cancer screening</li><li>Personalized oral hygiene recommendations</li></ul><h2>How Often Should You Visit?</h2><p>The American Dental Association recommends professional cleanings every six months for most patients. However, patients with gum disease or certain health conditions may benefit from more frequent visits. Your dentist will recommend a schedule tailored to your individual needs.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80", "alt": "Dental hygienist performing a professional teeth cleaning" },
+        "summary": "<p>Professional cleanings and comprehensive exams to keep your teeth and gums healthy. Recommended every six months.</p>",
+        "duration": "60 minutes",
+        "price_range": "$150 - $300",
+        "insurance_accepted": true,
+        "service_category": ["Preventive Care"]
+      }
+    },
+    {
+      "id": "service-implants",
+      "type": "node.service",
+      "path": "/services/dental-implants",
+      "values": {
+        "title": "Dental Implants",
+        "body": "<p>Dental implants are the gold standard for replacing missing teeth. These titanium posts are surgically placed in the jawbone where they fuse naturally with the bone, providing a permanent, stable foundation for replacement teeth that look, feel, and function like natural teeth.</p><h2>Benefits of Dental Implants</h2><ul><li>Look and feel like natural teeth</li><li>Preserve jawbone health and prevent bone loss</li><li>No adhesives or removal required</li><li>Can last a lifetime with proper care</li><li>Eat, speak, and smile with confidence</li></ul><h2>The Implant Process</h2><p>Treatment typically occurs in stages over several months:</p><ul><li><strong>Consultation:</strong> Comprehensive exam including 3D imaging to assess bone density and plan placement</li><li><strong>Placement:</strong> The titanium implant is surgically placed in the jawbone under local anesthesia</li><li><strong>Healing:</strong> 3-6 months for the implant to integrate with the bone (osseointegration)</li><li><strong>Restoration:</strong> A custom crown, bridge, or denture is attached to the implant</li></ul><p>We offer sedation options for patients who experience dental anxiety.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=800&q=80", "alt": "Close-up of a dental implant model showing placement" },
+        "summary": "<p>Permanent tooth replacement that looks, feels, and functions like natural teeth. A long-lasting solution for missing teeth.</p>",
+        "duration": "Multiple visits over 3-6 months",
+        "price_range": "$3,000 - $5,000 per implant",
+        "insurance_accepted": true,
+        "service_category": ["Restorative", "Oral Surgery"]
+      }
+    },
+    {
+      "id": "service-whitening",
+      "type": "node.service",
+      "path": "/services/teeth-whitening",
+      "values": {
+        "title": "Professional Teeth Whitening",
+        "body": "<p>Reveal a brighter, more radiant smile with our professional whitening treatments. Whether you prefer the dramatic results of an in-office session or the convenience of a take-home kit, we offer safe and effective solutions tailored to your lifestyle and goals.</p><h2>In-Office Whitening</h2><p>Our in-office treatment uses a professional-strength whitening gel activated by a specialized LED light. In just one hour, you can achieve teeth up to eight shades whiter. This is the perfect choice for patients who want immediate, noticeable results.</p><h2>Take-Home Whitening Kits</h2><p>We create custom-fitted whitening trays from impressions of your teeth, ensuring even contact with the whitening gel and maximum comfort. Wear the trays for 30-60 minutes daily for two weeks for gradual, natural-looking results.</p><h2>Maintaining Your Results</h2><ul><li>Brush twice daily with a whitening toothpaste</li><li>Limit coffee, tea, red wine, and other staining foods</li><li>Schedule touch-up treatments every 6-12 months</li><li>Continue with regular professional cleanings</li></ul>",
+        "image": { "uri": "https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?w=800&q=80", "alt": "Patient smiling brightly after teeth whitening treatment" },
+        "summary": "<p>Professional-grade whitening treatments for a brighter, more confident smile. In-office and take-home options available.</p>",
+        "duration": "60 minutes (in-office) or 2 weeks (take-home)",
+        "price_range": "$300 - $600",
+        "insurance_accepted": false,
+        "service_category": ["Cosmetic"]
+      }
+    },
+    {
+      "id": "service-invisalign",
+      "type": "node.service",
+      "path": "/services/invisalign-clear-aligners",
+      "values": {
+        "title": "Invisalign Clear Aligners",
+        "body": "<p>Straighten your teeth discreetly with Invisalign clear aligners. These virtually invisible, removable aligners gradually shift your teeth into the desired position without the brackets and wires of traditional braces.</p><h2>How Invisalign Works</h2><ul><li>We take digital impressions of your teeth using a 3D scanner (no messy molds)</li><li>A custom treatment plan maps out the precise movements of your teeth</li><li>You receive a series of custom aligners, each worn for 1-2 weeks</li><li>You visit our office every 6-8 weeks to monitor progress</li><li>Treatment typically takes 12-18 months for most cases</li></ul><h2>Advantages Over Traditional Braces</h2><ul><li>Nearly invisible when worn</li><li>Removable for eating, drinking, brushing, and flossing</li><li>No food restrictions</li><li>Fewer office visits required</li><li>More comfortable than metal brackets and wires</li></ul><p>As a certified Invisalign provider, Dr. Patel has successfully treated over 300 patients with clear aligner therapy.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800&q=80", "alt": "Clear dental aligners held in hand" },
+        "summary": "<p>Straighten your teeth discreetly with custom clear aligners. Virtually invisible, removable, and comfortable.</p>",
+        "duration": "12-18 months total treatment",
+        "price_range": "$3,500 - $7,000",
+        "insurance_accepted": true,
+        "service_category": ["Orthodontics", "Cosmetic"]
+      }
+    },
+    {
+      "id": "provider-patel",
+      "type": "node.provider",
+      "path": "/team/dr-anita-patel",
+      "values": {
+        "title": "Dr. Anita Patel, DDS",
+        "body": "<p>Dr. Anita Patel founded Brightside Dental in 2001 with a vision of providing exceptional dental care in a welcoming, patient-centered environment. With over 25 years of experience, she combines clinical expertise with a gentle, compassionate approach that puts even the most anxious patients at ease.</p><p>Dr. Patel is committed to staying at the forefront of dental technology and techniques. She regularly attends continuing education courses and has completed advanced training in implant dentistry, cosmetic procedures, and digital smile design.</p><p>Outside the office, Dr. Patel volunteers with the Give Back a Smile program, providing free dental care to survivors of domestic violence, and mentors pre-dental students at the local university.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80", "alt": "Dr. Anita Patel, general dentist, professional portrait" },
+        "credentials": "DDS, FAGD",
+        "specialty": "General & Cosmetic Dentistry",
+        "education": "<p>Doctor of Dental Surgery, University of Pennsylvania School of Dental Medicine<br>Bachelor of Science in Biology, UCLA<br>Fellow, Academy of General Dentistry</p>",
+        "languages": ["English", "Hindi", "Gujarati"],
+        "accepting_patients": true,
+        "provider_role": ["General Dentist"]
+      }
+    },
+    {
+      "id": "provider-chen",
+      "type": "node.provider",
+      "path": "/team/dr-michael-chen",
+      "values": {
+        "title": "Dr. Michael Chen, DMD",
+        "body": "<p>Dr. Michael Chen joined Brightside Dental in 2015, bringing specialized expertise in orthodontics and pediatric dentistry. Known for his patience and humor, he has a particular gift for working with children and teens, making orthodontic treatment a positive experience for young patients and their families.</p><p>Dr. Chen is a certified Invisalign provider and has been recognized as a Top Provider for three consecutive years. He also has extensive experience with traditional braces, lingual braces, and early intervention orthodontics for children.</p><p>When he's not in the office, Dr. Chen coaches his daughter's youth soccer team and enjoys hiking in the mountains near his home.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80", "alt": "Dr. Michael Chen, orthodontist, professional portrait" },
+        "credentials": "DMD, MS",
+        "specialty": "Orthodontics",
+        "education": "<p>Doctor of Dental Medicine, Tufts University School of Dental Medicine<br>Master of Science in Orthodontics, Tufts University<br>Bachelor of Science in Biomedical Engineering, Boston University</p>",
+        "languages": ["English", "Mandarin"],
+        "accepting_patients": true,
+        "provider_role": ["Orthodontist"]
+      }
+    },
+    {
+      "id": "provider-johnson",
+      "type": "node.provider",
+      "path": "/team/dr-rachel-johnson",
+      "values": {
+        "title": "Dr. Rachel Johnson, DDS",
+        "body": "<p>Dr. Rachel Johnson is Brightside Dental's oral surgery specialist, providing expert care for complex extractions, dental implant placement, and corrective jaw surgery. She completed a four-year residency in oral and maxillofacial surgery at Johns Hopkins Hospital, where she gained extensive experience in both office-based and hospital surgical procedures.</p><p>Dr. Johnson is known for her meticulous surgical technique and her commitment to patient comfort. She offers multiple sedation options, including IV sedation, to ensure a pain-free experience for every patient.</p><p>Dr. Johnson is an active member of the American Association of Oral and Maxillofacial Surgeons and regularly lectures at regional dental conferences on advances in implant surgery.</p>",
+        "image": { "uri": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=800&q=80", "alt": "Dr. Rachel Johnson, oral surgeon, professional portrait" },
+        "credentials": "DDS, MD",
+        "specialty": "Oral & Maxillofacial Surgery",
+        "education": "<p>Doctor of Dental Surgery, Columbia University College of Dental Medicine<br>Doctor of Medicine, Columbia University College of Physicians and Surgeons<br>Residency in Oral and Maxillofacial Surgery, Johns Hopkins Hospital</p>",
+        "languages": ["English", "Spanish"],
+        "accepting_patients": true,
+        "provider_role": ["Oral Surgeon"]
+      }
+    },
+    {
+      "id": "testimonial-sarah",
+      "type": "node.testimonial",
+      "path": "/testimonials/sarah-m",
+      "values": {
+        "title": "Sarah M. - Invisalign Patient",
+        "quote": "<p>I was always self-conscious about my crooked teeth but dreaded the idea of metal braces as an adult. Dr. Chen recommended Invisalign, and the results exceeded all my expectations. The aligners were so comfortable I forgot I was wearing them, and now I can't stop smiling. The entire team at Brightside made the process seamless from start to finish.</p>",
+        "patient_name": "Sarah M.",
+        "treatment_received": "Invisalign Clear Aligners",
+        "rating": 5,
+        "date_received": "2025-11-15T00:00:00"
+      }
+    },
+    {
+      "id": "testimonial-james",
+      "type": "node.testimonial",
+      "path": "/testimonials/james-r",
+      "values": {
+        "title": "James R. - Dental Implant Patient",
+        "quote": "<p>After losing two teeth in an accident, I was devastated. Dr. Johnson placed implants that look and feel completely natural. The recovery was much easier than I expected, and her team checked in on me regularly during the healing process. I'm so grateful I chose Brightside Dental - they truly changed my life.</p>",
+        "patient_name": "James R.",
+        "treatment_received": "Dental Implants",
+        "rating": 5,
+        "date_received": "2025-09-20T00:00:00"
+      }
+    },
+    {
+      "id": "testimonial-maria",
+      "type": "node.testimonial",
+      "path": "/testimonials/maria-g",
+      "values": {
+        "title": "Maria G. - Family Patient",
+        "quote": "<p>We've been bringing our entire family to Brightside Dental for over ten years. Dr. Patel is wonderful with our kids - she's turned dental visits from something they dreaded into something they actually look forward to. The office is always clean, the staff is incredibly friendly, and they're great about working with our insurance.</p>",
+        "patient_name": "Maria G.",
+        "treatment_received": "General & Pediatric Dentistry",
+        "rating": 5,
+        "date_received": "2026-01-08T00:00:00"
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About Brightside Dental",
+        "body": "<h2>Our Philosophy</h2><p>At Brightside Dental, we believe that exceptional dental care begins with genuine relationships. We take the time to listen to your concerns, explain your options clearly, and develop treatment plans that align with your goals and budget. Our practice combines cutting-edge technology with old-fashioned personal attention.</p><h2>Our Office</h2><p>Our modern, purpose-built office features state-of-the-art equipment including digital X-rays, 3D cone beam CT scanning, intraoral cameras, and same-day crown technology. Every treatment room is designed for comfort, with large windows, personal entertainment screens, and noise-canceling headphones available for all patients.</p><h2>Technology</h2><ul><li>Digital X-rays with 90% less radiation than traditional film</li><li>CEREC same-day crown fabrication</li><li>3D cone beam CT for precise implant planning</li><li>Intraoral cameras for patient education</li><li>Paperless charting and secure patient portal</li></ul><h2>Insurance & Payment</h2><p>We accept most major dental insurance plans and offer flexible payment plans through CareCredit. Our front desk team is happy to verify your benefits and provide a cost estimate before any treatment.</p>"
+      }
+    },
+    {
+      "id": "page-new-patients",
+      "type": "node.page",
+      "path": "/new-patients",
+      "values": {
+        "title": "New Patient Information",
+        "body": "<h2>Welcome to Brightside Dental</h2><p>We're delighted you've chosen us for your dental care. Here's what you can expect at your first visit.</p><h2>Your First Appointment</h2><p>Your initial visit typically takes about 90 minutes and includes:</p><ul><li>A comprehensive oral health evaluation</li><li>Digital X-rays and photographs</li><li>Oral cancer screening</li><li>Gum disease assessment</li><li>Discussion of your dental history and goals</li><li>A personalized treatment plan and cost estimate</li></ul><h2>What to Bring</h2><ul><li>Photo ID</li><li>Dental insurance card (if applicable)</li><li>List of current medications</li><li>Any recent dental X-rays or records from your previous dentist</li></ul><h2>Patient Forms</h2><p>Save time at your visit by downloading and completing our new patient forms in advance. Forms are available through our secure online patient portal. You'll receive a link via email after scheduling your first appointment.</p><h2>Office Hours</h2><ul><li>Monday - Thursday: 7:30 AM - 6:00 PM</li><li>Friday: 8:00 AM - 3:00 PM</li><li>Saturday: 8:00 AM - 1:00 PM (by appointment)</li><li>Sunday: Closed</li></ul>"
+      }
+    }
+  ]
+}

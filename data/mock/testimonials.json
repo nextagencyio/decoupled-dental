@@ -1,0 +1,57 @@
+{
+  "data": {
+    "nodeTestimonials": {
+      "__typename": "NodeTestimonialConnection",
+      "nodes": [
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-sarah",
+          "title": "Sarah M. - Invisalign Patient",
+          "path": "/testimonials/sarah-m",
+          "quote": {
+            "processed": "<p>I was always self-conscious about my crooked teeth but dreaded the idea of metal braces as an adult. Dr. Chen recommended Invisalign, and the results exceeded all my expectations. The aligners were so comfortable I forgot I was wearing them, and now I can't stop smiling. The entire team at Brightside made the process seamless from start to finish.</p>",
+            "summary": "I was always self-conscious about my crooked teeth but dreaded the idea of metal braces as an adult. Dr. Chen recommended Invisalign, and the results exceeded all my expectations. The aligners were so"
+          },
+          "patientName": "Sarah M.",
+          "treatmentReceived": "Invisalign Clear Aligners",
+          "rating": 5,
+          "dateReceived": {
+            "timestamp": 1763186400
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-james",
+          "title": "James R. - Dental Implant Patient",
+          "path": "/testimonials/james-r",
+          "quote": {
+            "processed": "<p>After losing two teeth in an accident, I was devastated. Dr. Johnson placed implants that look and feel completely natural. The recovery was much easier than I expected, and her team checked in on me regularly during the healing process. I'm so grateful I chose Brightside Dental - they truly changed my life.</p>",
+            "summary": "After losing two teeth in an accident, I was devastated. Dr. Johnson placed implants that look and feel completely natural. The recovery was much easier than I expected, and her team checked in on me "
+          },
+          "patientName": "James R.",
+          "treatmentReceived": "Dental Implants",
+          "rating": 5,
+          "dateReceived": {
+            "timestamp": 1758344400
+          }
+        },
+        {
+          "__typename": "NodeTestimonial",
+          "id": "testimonial-maria",
+          "title": "Maria G. - Family Patient",
+          "path": "/testimonials/maria-g",
+          "quote": {
+            "processed": "<p>We've been bringing our entire family to Brightside Dental for over ten years. Dr. Patel is wonderful with our kids - she's turned dental visits from something they dreaded into something they actually look forward to. The office is always clean, the staff is incredibly friendly, and they're great about working with our insurance.</p>",
+            "summary": "We've been bringing our entire family to Brightside Dental for over ten years. Dr. Patel is wonderful with our kids - she's turned dental visits from something they dreaded into something they actuall"
+          },
+          "patientName": "Maria G.",
+          "treatmentReceived": "General & Pediatric Dentistry",
+          "rating": 5,
+          "dateReceived": {
+            "timestamp": 1767852000
+          }
+        }
+      ]
+    }
+  }
+}
