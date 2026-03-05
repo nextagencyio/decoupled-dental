@@ -24,7 +24,7 @@ async function getHomepageData(apolloClient: ReturnType<typeof getServerApolloCl
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = 'Clearview Dental - Modern Family Dentistry'
+  const title = 'Brightside Dental - Modern Family Dentistry'
   const description = 'Modern dental care for the whole family. From routine cleanings to advanced cosmetic procedures, our experienced team helps you achieve a healthy, confident smile.'
 
   return {

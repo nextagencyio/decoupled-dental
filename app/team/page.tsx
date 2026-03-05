@@ -9,7 +9,7 @@ import ProviderCard from '../components/ProviderCard'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Providers | Clearview Dental',
+  title: 'Providers | Brightside Dental',
   description: 'Meet our dental providers.',
 }
 

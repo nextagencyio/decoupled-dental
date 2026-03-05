@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Schedule an appointment or contact Clearview Dental.',
+  description: 'Schedule an appointment or contact Brightside Dental.',
 }
 
 export default function Contact() {

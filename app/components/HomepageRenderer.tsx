@@ -119,7 +119,7 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-sm text-primary-300">
-              &copy; {new Date().getFullYear()} Clearview Dental
+              &copy; {new Date().getFullYear()} Brightside Dental
             </p>
             <div className="flex items-center space-x-6">
               <Link href="/services" className="text-sm text-primary-300 hover:text-white transition-colors">Services</Link>

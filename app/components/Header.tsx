@@ -47,7 +47,7 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="font-heading text-lg font-bold tracking-tight text-gray-900 hover:text-primary-500 transition-colors duration-200">
-            Clearview Dental
+            Brightside Dental
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">

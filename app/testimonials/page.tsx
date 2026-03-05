@@ -9,7 +9,7 @@ import TestimonialCard from '../components/TestimonialCard'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Testimonials | Clearview Dental',
+  title: 'Testimonials | Brightside Dental',
   description: 'Patient testimonials and reviews.',
 }
 

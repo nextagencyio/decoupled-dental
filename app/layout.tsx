@@ -35,8 +35,8 @@ function getSiteUrl(): string {
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: 'Clearview Dental',
-    template: `%s | Clearview Dental`
+    default: 'Brightside Dental',
+    template: `%s | Brightside Dental`
   },
   description: 'Modern dental care for the whole family. From routine cleanings to advanced cosmetic procedures, our experienced team helps you achieve a healthy, confident smile.',
   formatDetection: {
