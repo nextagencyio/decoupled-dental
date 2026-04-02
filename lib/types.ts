@@ -99,6 +99,7 @@ export interface DrupalPage extends DrupalNode {
 }
 
 export interface DrupalHomepage extends DrupalNode {
+  __typename?: string
   heroTitle?: string
   heroSubtitle?: string
   heroDescription?: {
