@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 async function getProviders() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_PROVIDER_TEASERS, { first: 50 })
+    const data = await client.raw(GET_PROVIDER_TEASERS, { first: 50 })
     return data?.nodeProviders?.nodes || []
   } catch (error) {
     console.error('Error fetching providers:', error)
@@ -50,7 +50,7 @@ export default async function ProvidersPage() {
             </div>
           ) : (
             <div className="border-t border-gray-200">
-              {items.map((item) => (
+              {items.map((item: any) => (
                 <ProviderCard key={item.id} item={item} />
               ))}
             </div>
